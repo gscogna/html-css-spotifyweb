@@ -144,7 +144,7 @@ main{
     color:white;
     text-decoration: none;
 }
-
+/* bottone upgrade */
 .btn{
     padding:10px 30px;
     border-radius:15px;
@@ -154,7 +154,7 @@ main{
 }
 
 .btn a:hover{
-    transform:scale(2);
+    transform:scale(1.1);
 }
 
 
