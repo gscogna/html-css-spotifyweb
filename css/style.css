@@ -51,12 +51,8 @@ main{
 
 /* nav-playlist */
 .nav-playlist{
-    display: flex;
-    flex-direction: column;
-}
-
-.playlist-link{
-line-height: 2.1;
+    min-height: 200px;
+    overflow: hidden;
 }
 
 .playlist i{
@@ -66,7 +62,7 @@ line-height: 2.1;
 }
 
 .playlist-link >ul{
-    min-height: 200px;
+    height: 100%;
     overflow-y: auto;
 }
 
@@ -96,7 +92,7 @@ line-height: 2.1;
     padding:2px;
 }
 
-  
+
 /* riutilizabili */
 .text-white{
     color:white;
@@ -138,6 +134,7 @@ line-height: 2.1;
     top:0;
     right:0;
     text-align: right;
+    z-index: 1;
 
 }
 
@@ -145,6 +142,7 @@ line-height: 2.1;
     text-transform: uppercase;
     color:white;
     text-decoration: none;
+
 
 }
 
