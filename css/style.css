@@ -171,10 +171,16 @@ main{
 }
 
 .titoli span{
-    padding:20px 15px;
+    padding:20px 30px;
 }
 
-/* border-bottom: 1px solid  #ADFF2F; */
+.titoli span:first-child::after{
+    content: '';
+    display: inline-block;
+    width: 30%;
+    border-bottom: 2px solid #ADFF2F;
+    margin-left: 35px;
+}
 
 .titoli span:hover{
     color:#717171;
@@ -187,16 +193,47 @@ main{
 .song_recently {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     text-align: center;
 }
 
 .box{
-    width: calc( 100% /  6 - 15px);
+    width: 200px;
+    height: 200px;
     margin-left: 15px;
+    margin-bottom:150px;
+    position:relative;
 }
 
 .song_recently img{
     width: 100%;
+}
+
+.layer{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.layer:hover{
+    background-color: rgb(22, 5, 57,0.4);
+    cursor: pointer;
+}
+
+.layer i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: grey;
+  display: none;
+}
+
+.layer:hover i {
+  display: inline;
 }
 
 .song_recently h5{
@@ -218,7 +255,8 @@ padding: 10px 0;
 }
 
 .box_song{
-    width: calc( 100% /  5 - 15px);
+    width: 200px;
+    height: 200px;
     margin-left: 15px;
 }
 
@@ -233,7 +271,8 @@ padding: 10px 0;
 }
 
 .box_last{
-    width: calc( 100% /  5 - 15px);
+    width: 200px;
+    height: 200px;
     margin-left: 15px;
 }
 
@@ -242,9 +281,20 @@ padding: 10px 0;
     border-radius: 50%;
 }
 
+/* footer */
+footer{
+    height:100px;
+    width: 100%;
+    background-color: #282828;
+    position: fixed;
+    bottom:0;
+    left:0;
 
+}
 
-
+.footer-left img{
+    width: 20%;
+}
 /* riutilizabili */
 .text-white{
     color:white;
@@ -275,17 +325,13 @@ padding: 10px 0;
     margin:20px;
 }
 
-.text-center{
-    text-align: center;
+.margin_50{
+    margin-top: 50px;
 }
 
-/* footer */
-footer{
-    height:100px;
-    width: 100%;
-    background-color: #282828;
-    position: fixed;
-    bottom:0;
-    left:0;
-
+.margin_100{
+    margin-top: 100px;
+}
+.text-center{
+    text-align: center;
 }
