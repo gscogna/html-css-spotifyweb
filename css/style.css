@@ -51,6 +51,7 @@ main{
 .hover-mouse:hover{
     opacity:0.7;
     border-left: 3px solid #ADFF2F;
+    cursor: pointer;
 }
 
 
@@ -76,6 +77,7 @@ main{
 .playlist:hover ,
 .created:hover{
     opacity: 0.7;
+    cursor: pointer;
 }
 
 .playlist-link{
@@ -119,7 +121,7 @@ main{
 /* sezione corpo centrale */
 .main-container{
     width:calc(100% - 200px);
-    height: 100%;
+    height: calc(100% - 100px);
     background-color: #141922;
     margin-top:100px;
     margin-bottom:100px;
@@ -128,14 +130,15 @@ main{
 
 /* header barra */
 .header-barra{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: calc(100% - 200px);
     height:100px;
-    line-height: 100px;
     background-color: #080B12;
     position: fixed;
     top:0;
     right:0;
-    text-align: right;
     z-index: 1;
 }
 
@@ -150,14 +153,12 @@ main{
     border-radius:15px;
     border:1px solid white;
     margin-right: 40px;
-    transition: all 0.5s;
 }
 
-.btn a:hover{
+.btn:hover{
     transform:scale(1.1);
+    cursor: pointer;
 }
-
-
 /* main music center */
 
 .titoli{
@@ -177,21 +178,25 @@ main{
 
 .titoli span:hover{
     color:#717171;
+    cursor: pointer;
 
 }
 
 /* sezioni canzoni */
+/* prima riga */
 .song_recently {
-    text-align: center;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    text-align: center;
+}
+
+.box{
+    width: calc( 100% /  6 - 15px);
+    margin-left: 15px;
 }
 
 .song_recently img{
-    height: 200px;
-    width: 200px;
+    width: 100%;
 }
 
 .song_recently h5{
@@ -206,6 +211,36 @@ padding: 10px 0;
     font-size: 16px;
 }
 
+
+/* seconda riga */
+.song_don_joe{
+    display: flex;
+}
+
+.box_song{
+    width: calc( 100% /  5 - 15px);
+    margin-left: 15px;
+}
+
+.box_song img{
+    width: 100%;
+}
+
+/* terza riga */
+
+.artist{
+    display: flex;
+}
+
+.box_last{
+    width: calc( 100% /  5 - 15px);
+    margin-left: 15px;
+}
+
+.box_last img{
+    width: 100%;
+    border-radius: 50%;
+}
 
 
 
@@ -223,17 +258,25 @@ padding: 10px 0;
     font-size: 20px;
 }
 
+.text-big{
+    font-size: 35px;
+}
+
 .text-bold{
     font-weight: bold;
-    padding:20px;
+    padding-left:5px;
 }
 
 .text_upper{
     text-transform: uppercase;
 }
 
-.margin-s{
-    margin-left:20px;
+.margin_20{
+    margin:20px;
+}
+
+.text-center{
+    text-align: center;
 }
 
 /* footer */
